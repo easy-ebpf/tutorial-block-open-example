@@ -1,7 +1,7 @@
 # From official php image.
 FROM golang:alpine
 
-LABEL org.opencontainers.image.source="https://github.com/easy-ebpf/tutorial-tcp-example"
+LABEL org.opencontainers.image.source="https://github.com/easy-ebpf/tutorial-block-open-example"
 
 RUN mkdir -p /workspace/cli
 

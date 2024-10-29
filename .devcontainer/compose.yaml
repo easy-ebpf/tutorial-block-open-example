@@ -1,6 +1,6 @@
 services:
   cli:
-    image: "ghcr.io/easy-ebpf/tutorial-tcp-example:latest"
+    image: "ghcr.io/easy-ebpf/tutorial-block-open-example:latest"
     privileged: true
     volumes:
       - ..:/workspaces/cli
