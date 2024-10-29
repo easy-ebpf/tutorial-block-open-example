@@ -1,11 +1,6 @@
-# tutorial-tcp-example
+# tutorial-block-open-example
 
-## 1. Run `tcpconnlat`
+## 1. Run `block_open`
 ```
-make run tcpconnlat
-```
-
-## 2. Run `tcpstates`
-```
-make run tcpstates
+make run block_open
 ```
