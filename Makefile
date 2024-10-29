@@ -11,8 +11,8 @@ run: clean
 	clang -O2 -g -target bpf -D__TARGET_ARCH_$(ARCH) -c $(filter-out $@,$(MAKECMDGOALS)).bpf.c -o $(filter-out $@,$(MAKECMDGOALS)).bpf.o
 	bpftool gen skeleton $(filter-out $@,$(MAKECMDGOALS)).bpf.o > $(filter-out $@,$(MAKECMDGOALS)).skel.h
 	gcc -W -Wall -Wextra -I/usr/include -L/usr/lib -c -o $(filter-out $@,$(MAKECMDGOALS)).o $(filter-out $@,$(MAKECMDGOALS)).c
-	gcc -o $(filter-out $@,$(MAKECMDGOALS)) $(filter-out $@,$(MAKECMDGOALS)).o -lbpf -lelf -lz /usr/lib/libargp.a
-	./$(filter-out $@,$(MAKECMDGOALS))
+	gcc -o $(filter-out $@,$(MAKECMDGOALS)) $(filter-out $@,$(MAKECMDGOALS)).o -lbpf -lelf -lz
+	./$(filter-out $@,$(MAKECMDGOALS)) file_list.conf
 
 trace:
 	bpftool prog trace log
